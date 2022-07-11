@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Ch10 JavaScript Dom</title>
+
+<style type="text/css">
+    div {position: relative}
+    h1 {margin: 25px auto; width: 100%; background-color: #E84B0D; text-align: center; font-size: 24px; font-family: sans-serif; color: #FFF}
+    
+    #leftbutt {width: 100px}
+</style>
+
+    </head>
+    <body>
+        <div id='theDiv'>
+            
+            <h1>The HTML DOM</h1>
+            <input type="button" id="button" value="Activate!">
+            
+            <p id="target"></p>
+
+        </div>
+
+    <script>
+  var targetDiv = document.getElementById("theDiv");
+  
+        var i = 0;
+   document.getElementById("button").onclick = function(){
+            var arrayOfColors = 
+            ["#FF5733", 
+            "#7D4C42", 
+            "#30944B", 
+            "#307F94", 
+            "#234E8F", 
+            "#58238F", 
+            "#8F235E", 
+            "#8F2354",
+            "#FF5476", 
+            "#6F6B6C"];
+            targetDiv.style.backgroundColor = arrayOfColors[i++];
+            console.log(i);
+            
+        }
+        
+ 
+        if(i = 9) {
+                i = 0;
+                
+             }
+             document.getElementById("button").onclick = function(){
+if(i == 9) {
+    i = 0;       
+}
+var arrayOfColors = [
+    "#FF5733", 
+    "#7D4C42", 
+    "#30944B", 
+    "#307F94", 
+    "#234E8F", 
+    "#58238F", 
+    "#8F235E", 
+    "#8F2354",
+    "#FF5476", 
+    "#6F6B6C"
+];
+    targetDiv.style.backgroundColor = arrayOfColors[i++];
+    console.log(i);
+}
+
+
+</script>
+    </body>
+</html>
